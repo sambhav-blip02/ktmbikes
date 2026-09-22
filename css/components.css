@@ -1,0 +1,1600 @@
+/* ==========================================================================
+   KTM BIKE SHOWROOM BUTWAL, NEPAL — COMPONENTS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Bike Catalog & Filter Tabs
+   -------------------------------------------------------------------------- */
+.filter-tabs-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.filter-tab-btn {
+  font-family: var(--font-racing);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #CCC;
+  background: var(--ktm-dark-card);
+  border: 1px solid var(--ktm-dark-border);
+  padding: 0.75rem 1.6rem;
+  clip-path: var(--ktm-clip-badge);
+  transition: var(--transition-fast);
+}
+
+.filter-tab-btn:hover {
+  border-color: var(--ktm-orange);
+  color: var(--ktm-orange);
+}
+
+.filter-tab-btn.active {
+  background: var(--ktm-orange);
+  color: #000;
+  border-color: var(--ktm-orange);
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.4);
+}
+
+.bikes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 2rem;
+}
+
+.bike-card {
+  background: var(--ktm-dark-card);
+  border: 1px solid var(--ktm-dark-border);
+  position: relative;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  clip-path: var(--ktm-clip-angle);
+}
+
+.bike-card:hover {
+  border-color: var(--ktm-orange);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 102, 0, 0.2);
+}
+
+.bike-card-ribbon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  background: var(--ktm-orange);
+  color: #000;
+  font-family: var(--font-racing);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  clip-path: var(--ktm-clip-badge);
+}
+
+.bike-card-image-wrap {
+  position: relative;
+  background: radial-gradient(circle at 50% 60%, #201a14 0%, #0d0d10 80%);
+  padding: 1.5rem 1rem;
+  overflow: hidden;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bike-card-image-wrap img {
+  max-height: 210px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.bike-card:hover .bike-card-image-wrap img {
+  transform: scale(1.05);
+}
+
+.bike-colors-preview {
+  position: absolute;
+  bottom: 12px;
+  right: 15px;
+  display: flex;
+  gap: 0.4rem;
+  background: rgba(0,0,0,0.6);
+  padding: 4px 8px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  display: inline-block;
+}
+
+.bike-card-content {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.bike-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.bike-category-tag {
+  font-family: var(--font-racing);
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ktm-orange);
+}
+
+.bike-cc-tag {
+  font-family: var(--font-racing);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ktm-gray-light);
+}
+
+.bike-title {
+  font-family: var(--font-racing);
+  font-size: 1.65rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--ktm-white);
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+}
+
+.bike-tagline {
+  font-size: 0.9rem;
+  color: var(--ktm-gray-light);
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.bike-key-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 0.5rem;
+  margin-bottom: 1.25rem;
+  border-radius: 4px;
+}
+
+.key-spec-item {
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.key-spec-item:last-child {
+  border-right: none;
+}
+
+.spec-label {
+  display: block;
+  font-family: var(--font-racing);
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: var(--ktm-gray-muted);
+}
+
+.spec-val {
+  font-family: var(--font-racing);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ktm-white);
+}
+
+.bike-pricing-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: rgba(255, 102, 0, 0.06);
+  border: 1px solid rgba(255, 102, 0, 0.2);
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 4px;
+}
+
+.price-details .price-caption {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ktm-gray-light);
+}
+
+.price-details .price-value {
+  font-family: var(--font-racing);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--ktm-white);
+  line-height: 1.1;
+}
+
+.emi-tag {
+  text-align: right;
+}
+
+.emi-tag span {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--ktm-gray-muted);
+}
+
+.emi-tag strong {
+  font-family: var(--font-racing);
+  font-size: 0.9rem;
+  color: var(--ktm-orange);
+}
+
+.bike-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.btn-ktm {
+  background: var(--ktm-orange);
+  color: #000;
+  font-family: var(--font-racing);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  clip-path: var(--ktm-clip-badge);
+  transition: var(--transition-fast);
+}
+
+.btn-ktm:hover {
+  background: #FFF;
+}
+
+.btn-ktm-outline {
+  background: transparent;
+  color: #FFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: var(--font-racing);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  clip-path: var(--ktm-clip-badge);
+  transition: var(--transition-fast);
+}
+
+.btn-ktm-outline:hover {
+  border-color: var(--ktm-orange);
+  color: var(--ktm-orange);
+  background: rgba(255, 102, 0, 0.1);
+}
+
+.bike-card-subactions {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--ktm-dark-border);
+  padding-top: 0.75rem;
+}
+
+.btn-rev-mini,
+.btn-compare-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-family: var(--font-racing);
+  font-weight: 600;
+  color: var(--ktm-gray-light);
+  transition: var(--transition-fast);
+}
+
+.btn-rev-mini:hover {
+  color: var(--ktm-orange);
+}
+
+.btn-compare-mini:hover {
+  color: #FFF;
+}
+
+/* --------------------------------------------------------------------------
+   2. Engine Sound Rev Simulator & Tachometer HUD
+   -------------------------------------------------------------------------- */
+.hud-section-bg {
+  background: radial-gradient(circle at 50% 50%, #1a110a 0%, #0c0c0f 80%);
+  border-top: 1px solid var(--ktm-dark-border);
+  border-bottom: 1px solid var(--ktm-dark-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.hud-container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: rgba(18, 18, 22, 0.85);
+  border: 1px solid rgba(255, 102, 0, 0.4);
+  box-shadow: 0 0 35px rgba(0,0,0,0.8), inset 0 0 20px rgba(255, 102, 0, 0.1);
+  padding: 2.5rem;
+  clip-path: var(--ktm-clip-angle);
+}
+
+.hud-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hud-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hud-status-led {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00FF66;
+  box-shadow: 0 0 10px #00FF66;
+  animation: pulseLed 1.5s infinite;
+}
+
+@keyframes pulseLed {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hud-title {
+  font-family: var(--font-racing);
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--ktm-white);
+}
+
+.hud-controls-select {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hud-controls-select label {
+  font-family: var(--font-racing);
+  font-size: 0.8rem;
+  color: var(--ktm-gray-light);
+  text-transform: uppercase;
+}
+
+.hud-select {
+  background: #0A0A0C;
+  border: 1px solid rgba(255, 102, 0, 0.5);
+  color: #FFF;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-racing);
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.hud-gauge-display {
+  background: #000;
+  border: 2px solid #222;
+  border-radius: 6px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.hud-gauge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.hud-rpm-big {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.rpm-number {
+  font-family: var(--font-racing);
+  font-size: 4rem;
+  font-weight: 700;
+  color: #FFF;
+  line-height: 1;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.rpm-label {
+  font-family: var(--font-racing);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ktm-orange);
+}
+
+.shift-light {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-family: var(--font-racing);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #777;
+  transition: var(--transition-fast);
+}
+
+.shift-light.active-shift {
+  background: #FF0033;
+  color: #FFF;
+  box-shadow: 0 0 25px #FF0033;
+  animation: flashShift 0.15s infinite alternate;
+}
+
+@keyframes flashShift {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+.hud-rpm-bar-track {
+  height: 24px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.hud-rpm-bar-fill {
+  height: 100%;
+  width: 14%;
+  background: linear-gradient(90deg, #00FF66, #FFB700, #FF6600);
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.7);
+  transition: width 0.05s linear;
+}
+
+.hud-gauge-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-racing);
+  font-size: 0.75rem;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.hud-gauge-ticks span:last-child {
+  color: #FF0033;
+}
+
+.hud-interactive-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-throttle-pedal {
+  background: linear-gradient(135deg, #FF6600 0%, #D84B00 100%);
+  color: #000;
+  font-family: var(--font-racing);
+  font-size: 1.35rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 1.25rem 3.5rem;
+  clip-path: var(--ktm-clip-badge);
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.6);
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  user-select: none;
+}
+
+.btn-throttle-pedal:hover {
+  background: #FFF;
+  color: #000;
+}
+
+.btn-throttle-pedal.pressed {
+  transform: scale(0.95) translateY(4px);
+  background: #FF2200;
+  color: #FFF;
+  box-shadow: 0 0 40px rgba(255, 34, 0, 0.9);
+}
+
+.btn-killswitch {
+  background: #1C1C22;
+  border: 1px solid #3A3A46;
+  color: #AAA;
+  font-family: var(--font-racing);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  transition: var(--transition-fast);
+}
+
+.btn-killswitch:hover,
+.btn-killswitch.triggered {
+  background: #3A0000;
+  border-color: #FF0033;
+  color: #FF0033;
+}
+
+.hud-profile-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 102, 0, 0.35);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hud-profile-info h4 {
+  font-family: var(--font-racing);
+  font-size: 1.2rem;
+  color: var(--ktm-white);
+  line-height: 1.2;
+}
+
+.hud-profile-info p {
+  font-size: 0.85rem;
+  color: var(--ktm-gray-light);
+  margin-top: 0.25rem;
+}
+
+.btn-play-clip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 102, 0, 0.15);
+  border: 1px solid var(--ktm-orange);
+  color: var(--ktm-orange);
+  font-family: var(--font-racing);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.65rem 1.25rem;
+  clip-path: var(--ktm-clip-badge);
+  transition: var(--transition-fast);
+}
+
+.btn-play-clip:hover,
+.btn-play-clip.playing {
+  background: var(--ktm-orange);
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+}
+
+.hud-visualizer-box {
+  background: #000;
+  border: 1px solid #222;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.hud-visualizer-header {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-family: var(--font-racing);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  color: #666;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.hud-oscilloscope {
+  width: 100%;
+  height: 60px;
+  display: block;
+}
+
+.hud-hint-text {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--ktm-gray-muted);
+  letter-spacing: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Side-by-Side Bike Comparator
+   -------------------------------------------------------------------------- */
+.comparator-selectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.selector-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 280px;
+}
+
+.selector-box label {
+  font-family: var(--font-racing);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  color: var(--ktm-orange);
+  text-transform: uppercase;
+}
+
+.selector-box select {
+  background: var(--ktm-dark-card);
+  border: 1px solid var(--ktm-dark-border);
+  color: #FFF;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-racing);
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.compare-vs-badge {
+  font-family: var(--font-racing);
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 800;
+  color: var(--ktm-orange);
+  background: rgba(255, 102, 0, 0.1);
+  border: 1px solid rgba(255, 102, 0, 0.3);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 1.2rem;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr 320px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.compare-card {
+  background: var(--ktm-dark-card);
+  border: 1px solid var(--ktm-dark-border);
+  clip-path: var(--ktm-clip-angle);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.compare-card-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--ktm-orange);
+  color: #000;
+  font-family: var(--font-racing);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  clip-path: var(--ktm-clip-badge);
+}
+
+.compare-img-wrap {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.compare-img-wrap img {
+  max-height: 160px;
+}
+
+.compare-card-header h3 {
+  font-family: var(--font-racing);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #FFF;
+}
+
+.compare-tagline {
+  font-size: 0.8rem;
+  color: var(--ktm-gray-light);
+  margin-bottom: 0.5rem;
+}
+
+.compare-price {
+  font-family: var(--font-racing);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ktm-orange);
+  margin-bottom: 1rem;
+}
+
+.compare-tax {
+  font-size: 0.75rem;
+  color: var(--ktm-gray-muted);
+  font-weight: normal;
+}
+
+.compare-quick-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.c-stat {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.c-stat span {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--ktm-gray-muted);
+}
+
+.c-stat strong {
+  font-family: var(--font-racing);
+  font-size: 0.85rem;
+  color: #FFF;
+}
+
+.compare-cta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.btn-ktm-small {
+  background: var(--ktm-orange);
+  color: #000;
+  font-family: var(--font-racing);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.btn-ktm-outline-small {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFF;
+  font-family: var(--font-racing);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.compare-table-wrap {
+  background: var(--ktm-dark-card);
+  border: 1px solid var(--ktm-dark-border);
+  overflow-x: auto;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.85rem;
+}
+
+.compare-table th {
+  font-family: var(--font-racing);
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #FFF;
+}
+
+.compare-table td:first-child {
+  font-weight: 600;
+  color: var(--ktm-gray-light);
+}
+
+.compare-table td:not(:first-child) {
+  text-align: right;
+  color: #FFF;
+}
+
+.compare-table .table-price {
+  font-family: var(--font-racing);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ktm-orange);
+}
+
+.compare-table .stat-highlight {
+  color: var(--ktm-orange);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   4. Nepal Bank Financing / EMI Calculator
+   -------------------------------------------------------------------------- */
+.emi-box-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  background: var(--ktm-dark-card);
+  border: 1px solid var(--ktm-dark-border);
+  padding: 3rem;
+  clip-path: var(--ktm-clip-angle);
+}
+
+.emi-inputs-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.emi-field-group label {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-racing);
+  font-size: 0.9rem;
+  color: var(--ktm-white);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+.emi-field-group label strong {
+  color: var(--ktm-orange);
+}
+
+.emi-input-control {
+  width: 100%;
+  background: #0A0A0C;
+  border: 1px solid var(--ktm-dark-border);
+  color: #FFF;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-racing);
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.emi-slider {
+  width: 100%;
+  accent-color: var(--ktm-orange);
+  height: 6px;
+  background: #222;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.bank-presets-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.bank-preset-btn {
+  background: #0A0A0C;
+  border: 1px solid var(--ktm-dark-border);
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border-radius: 4px;
+  transition: var(--transition-fast);
+}
+
+.bank-preset-btn span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--ktm-gray-light);
+}
+
+.bank-preset-btn strong {
+  font-family: var(--font-racing);
+  font-size: 0.9rem;
+  color: #FFF;
+}
+
+.bank-preset-btn.active,
+.bank-preset-btn:hover {
+  border-color: var(--ktm-orange);
+  background: rgba(255, 102, 0, 0.08);
+}
+
+.bank-preset-btn.active strong {
+  color: var(--ktm-orange);
+}
+
+.emi-results-col {
+  background: #0A0A0C;
+  border: 1px solid rgba(255, 102, 0, 0.3);
+  padding: 2.5rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.emi-hero-result {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.emi-hero-result span.emi-cap {
+  font-family: var(--font-racing);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: var(--ktm-gray-light);
+  text-transform: uppercase;
+}
+
+.emi-hero-result .emi-big-amount {
+  font-family: var(--font-racing);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--ktm-orange);
+  line-height: 1.1;
+  text-shadow: 0 0 25px rgba(255, 102, 0, 0.4);
+}
+
+.emi-breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.5rem;
+}
+
+.breakdown-row span {
+  color: var(--ktm-gray-light);
+}
+
+.breakdown-row strong {
+  font-family: var(--font-racing);
+  color: #FFF;
+}
+
+/* --------------------------------------------------------------------------
+   5. Butwal Routes & Showroom Heritage
+   -------------------------------------------------------------------------- */
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.route-card {
+  background: var(--ktm-dark-card);
+  border: 1px solid var(--ktm-dark-border);
+  padding: 2rem;
+  position: relative;
+  clip-path: var(--ktm-clip-angle);
+  transition: var(--transition-smooth);
+}
+
+.route-card:hover {
+  border-color: var(--ktm-orange);
+  transform: translateY(-4px);
+}
+
+.route-tag {
+  display: inline-block;
+  font-family: var(--font-racing);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ktm-orange);
+  background: rgba(255, 102, 0, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.route-card h4 {
+  font-family: var(--font-racing);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 0.5rem;
+}
+
+.route-distance,
+.route-elevation {
+  font-size: 0.85rem;
+  color: var(--ktm-gray-light);
+  margin-bottom: 0.25rem;
+}
+
+.route-desc {
+  font-size: 0.9rem;
+  color: #BBB;
+  line-height: 1.5;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.route-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.75rem;
+}
+
+.route-bike-label {
+  font-size: 0.75rem;
+  color: var(--ktm-gray-muted);
+  display: block;
+}
+
+.route-bike-val {
+  font-family: var(--font-racing);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ktm-orange);
+}
+
+/* --------------------------------------------------------------------------
+   6. PowerParts & Dealership Showcase
+   -------------------------------------------------------------------------- */
+.powerparts-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  background: var(--ktm-dark-card);
+  border: 1px solid var(--ktm-dark-border);
+  padding: 3rem;
+  clip-path: var(--ktm-clip-angle);
+}
+
+.powerparts-content h3 {
+  font-family: var(--font-racing);
+  font-size: 2.3rem;
+  font-style: italic;
+  color: #FFF;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.powerparts-content p {
+  font-size: 1rem;
+  color: var(--ktm-gray-light);
+  margin-bottom: 1.5rem;
+}
+
+.powerparts-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.powerparts-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-racing);
+  font-size: 0.95rem;
+  color: #FFF;
+}
+
+.powerparts-list li span.dot {
+  color: var(--ktm-orange);
+  font-size: 1.2rem;
+}
+
+.powerparts-media img {
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 102, 0, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   7. Butwal Dealer Info & Location
+   -------------------------------------------------------------------------- */
+.dealer-info-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  background: var(--ktm-dark-card);
+  border: 1px solid var(--ktm-dark-border);
+  padding: 3rem;
+  clip-path: var(--ktm-clip-angle);
+}
+
+.dealer-main h3 {
+  font-family: var(--font-racing);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 0.3rem;
+}
+
+.dealer-distributor {
+  font-size: 0.85rem;
+  color: var(--ktm-orange);
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.dealer-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-item svg {
+  color: var(--ktm-orange);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.contact-item h5 {
+  font-family: var(--font-racing);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--ktm-gray-muted);
+}
+
+.contact-item p {
+  font-size: 1rem;
+  color: #FFF;
+}
+
+.contact-item a {
+  color: #FFF;
+  transition: var(--transition-fast);
+}
+
+.contact-item a:hover {
+  color: var(--ktm-orange);
+}
+
+.dealer-hours-box {
+  background: #0A0A0C;
+  border: 1px solid var(--ktm-dark-border);
+  padding: 2rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dealer-hours-box h4 {
+  font-family: var(--font-racing);
+  font-size: 1.2rem;
+  color: #FFF;
+  margin-bottom: 1rem;
+}
+
+.services-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.service-tag {
+  font-family: var(--font-racing);
+  font-size: 0.75rem;
+  color: var(--ktm-gray-light);
+  background: #141418;
+  border: 1px solid #282832;
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   8. Modals (Booking & Specs)
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: var(--ktm-dark-card);
+  border: 1px solid var(--ktm-orange);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 102, 0, 0.3);
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  clip-path: var(--ktm-clip-angle);
+  padding: 2.5rem;
+}
+
+.modal-card.large {
+  max-width: 900px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #AAA;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  color: var(--ktm-orange);
+}
+
+.modal-header h3 {
+  font-family: var(--font-racing);
+  font-size: 1.85rem;
+  color: #FFF;
+  margin-bottom: 0.3rem;
+}
+
+.modal-header p {
+  font-size: 0.9rem;
+  color: var(--ktm-gray-light);
+  margin-bottom: 1.75rem;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-racing);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--ktm-gray-light);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.form-input {
+  width: 100%;
+  background: #0A0A0C;
+  border: 1px solid var(--ktm-dark-border);
+  color: #FFF;
+  padding: 0.8rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  border-radius: 4px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--ktm-orange);
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.booking-success-box {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.success-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.booking-success-box h3 {
+  font-family: var(--font-racing);
+  font-size: 2rem;
+  color: var(--ktm-orange);
+  margin-bottom: 0.5rem;
+}
+
+.success-ref {
+  font-family: var(--font-racing);
+  font-size: 1.1rem;
+  color: #FFF;
+  margin-bottom: 1rem;
+}
+
+.btn-ktm-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #25D366;
+  color: #FFF;
+  font-family: var(--font-racing);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.85rem 1.5rem;
+  border-radius: 4px;
+  margin-right: 0.75rem;
+  transition: var(--transition-fast);
+}
+
+.btn-ktm-whatsapp:hover {
+  background: #1EBE5D;
+}
+
+/* Spec Modal Inner */
+.spec-modal-header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--ktm-dark-border);
+  padding-bottom: 1.5rem;
+}
+
+.modal-bike-thumb {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.modal-bike-title-block .modal-cat {
+  font-family: var(--font-racing);
+  font-size: 0.8rem;
+  color: var(--ktm-orange);
+  letter-spacing: 1px;
+}
+
+.modal-bike-title-block h2 {
+  font-family: var(--font-racing);
+  font-size: 2rem;
+  color: #FFF;
+  line-height: 1.1;
+}
+
+.modal-tagline {
+  color: var(--ktm-gray-light);
+  font-size: 0.9rem;
+  margin: 0.3rem 0 0.8rem 0;
+}
+
+.modal-price {
+  font-family: var(--font-racing);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ktm-orange);
+}
+
+.spec-modal-highlights {
+  background: rgba(255, 102, 0, 0.05);
+  border: 1px solid rgba(255, 102, 0, 0.2);
+  padding: 1.25rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.spec-modal-highlights h4 {
+  font-family: var(--font-racing);
+  color: var(--ktm-orange);
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.6rem;
+}
+
+.spec-modal-highlights ul {
+  padding-left: 1.2rem;
+  color: #DDD;
+  font-size: 0.9rem;
+}
+
+.spec-detailed-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.spec-section h4 {
+  font-family: var(--font-racing);
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  color: var(--ktm-orange);
+  border-bottom: 1px solid var(--ktm-dark-border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.spec-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.spec-section td {
+  padding: 0.45rem 0;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.spec-section td:first-child {
+  color: var(--ktm-gray-light);
+  width: 45%;
+}
+
+.spec-section td:last-child {
+  color: #FFF;
+}
+
+.modal-footer-cta {
+  display: flex;
+  gap: 1rem;
+  border-top: 1px solid var(--ktm-dark-border);
+  padding-top: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. Footer
+   -------------------------------------------------------------------------- */
+.footer-main {
+  background: #060608;
+  border-top: 2px solid var(--ktm-orange);
+  padding: 5rem 0 2rem 0;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  color: var(--ktm-gray-light);
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.footer-col h4 {
+  font-family: var(--font-racing);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ktm-white);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--ktm-orange);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--ktm-gray-light);
+  transition: var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--ktm-orange);
+  padding-left: 4px;
+}
+
+.footer-contact-item {
+  font-size: 0.85rem;
+  color: var(--ktm-gray-light);
+  margin-bottom: 0.85rem;
+  line-height: 1.5;
+}
+
+.footer-contact-item strong {
+  display: block;
+  font-family: var(--font-racing);
+  color: #FFF;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1A1A22;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--ktm-gray-muted);
+  flex-wrap: wrap;
+  gap: 1rem;
+}

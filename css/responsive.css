@@ -1,0 +1,160 @@
+/* ==========================================================================
+   KTM BIKE SHOWROOM BUTWAL, NEPAL — RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Medium Desktops and Laptops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-table-wrap {
+    order: 3;
+  }
+
+  .dealer-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Tablets & Small Laptops (max-width: 992px) */
+@media (max-width: 992px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #0D0D10;
+    border-bottom: 2px solid var(--ktm-orange);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.35s ease-in-out;
+  }
+
+  .nav-links.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-actions .btn-dealer-contact {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .emi-box-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .powerparts-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-detailed-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .bikes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bike-key-specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .key-spec-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .key-spec-item:nth-child(3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 0.5rem;
+  }
+
+  .key-spec-item:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 0.5rem;
+    border-right: none;
+  }
+
+  .hud-container {
+    padding: 1.5rem;
+  }
+
+  .rpm-number {
+    font-size: 2.8rem;
+  }
+
+  .btn-throttle-pedal {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.15rem;
+  }
+
+  .bank-presets-list {
+    grid-template-columns: 1fr;
+  }
+
+  .emi-hero-result .emi-big-amount {
+    font-size: 2.2rem;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-card {
+    padding: 1.5rem;
+  }
+
+  .spec-modal-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-bike-thumb {
+    width: 100%;
+  }
+
+  .modal-footer-cta {
+    flex-direction: column;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+}

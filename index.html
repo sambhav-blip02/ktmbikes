@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KTM Bike Showroom Butwal | Official Authorized Dealer (Highway Autovilla)</title>
+  <meta name="description" content="Explore official KTM motorcycles in Butwal, Nepal. Check latest Nepal NPR prices and specifications for KTM Duke, RC, and Adventure. Calculate EMI, listen to exhaust revs, and book test rides at Highway Autovilla Kalikanagar, Butwal.">
+  <meta name="keywords" content="KTM Nepal, KTM Butwal, KTM Duke 390 price Nepal, KTM RC 390 Nepal, KTM 250 Duke, KTM Showroom Butwal, Highway Autovilla, KTM EMI calculator Nepal">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Sticky Header & Navigation
+       ========================================================================= -->
+  <header class="header-nav" id="mainHeader">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo-wrap" aria-label="KTM Butwal Showroom Home">
+        <div class="ktm-logo-text">KTM<span class="ktm-slash">»</span></div>
+        <div class="showroom-tagline">
+          READY TO RACE
+          <span class="showroom-subtag">BUTWAL • HIGHWAY AUTOVILLA</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#models">Models</a></li>
+          <li><a href="#engine-hud-section">Exhaust Sound</a></li>
+          <li><a href="#comparator-section">Compare</a></li>
+          <li><a href="#emi-calculator">EMI Finance</a></li>
+          <li><a href="#routes">Butwal Trails</a></li>
+          <li><a href="#powerparts">PowerWear</a></li>
+          <li><a href="#showroom">Showroom</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+9779802622282" class="btn-dealer-contact" title="Direct Phone Call to Butwal Showroom">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          9802622282
+        </a>
+        <button class="btn-nav-book" onclick="openBookingModal(null, 'Test Ride')">
+          Test Ride
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Hero Section: Ready To Race Butwal
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="hero-overlay-glow"></div>
+    <div class="container hero-content">
+      <div class="hero-badge-pill">
+        <span>🇳🇵 AUTHORIZED DEALER</span> • HIGHWAY AUTOVILLA, BUTWAL
+      </div>
+      <h1 class="hero-title">
+        UNLEASH PURE <br>
+        <span class="orange-highlight">READY TO RACE</span> <br>
+        PERFORMANCE
+      </h1>
+      <p class="hero-subtitle">
+        Welcome to the official KTM motorcycle sanctuary at the gateway to the Siddhartha Highway. Explore Austria's championship-winning street, supersport, and Himalayan adventure machines with authorized Nepal warranties, genuine PowerParts, and hassle-free bank financing.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#models" class="btn-ktm-primary">
+          Explore KTM Lineup
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button class="btn-ktm-secondary" onclick="openBookingModal(null, 'Test Ride')">
+          Book Butwal Test Ride
+        </button>
+      </div>
+
+      <div class="hero-stats-row">
+        <div class="hero-stat-item">
+          <strong>8+ <span>MODELS</span></strong>
+          <span class="label">Duke • RC • Adventure</span>
+        </div>
+        <div class="hero-stat-item">
+          <strong>NPR <span>5.99L</span></strong>
+          <span class="label">Starting Price in Butwal</span>
+        </div>
+        <div class="hero-stat-item">
+          <strong>100% <span>GENUINE</span></strong>
+          <span class="label">Hansraj Hulaschand & Co.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. Complete KTM Models Catalog
+       ========================================================================= -->
+  <section class="section-pad" id="models">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pretitle">PRECISION ENGINEERING</span>
+        <h2 class="section-title">THE 2025/2026 KTM LINEUP</h2>
+        <p class="section-subtitle">
+          Select your category to compare cutting-edge Naked Duke agility, track-bred RC aerodynamics, or Himalayan-dominating Adventure capabilities with official Nepal NPR pricing.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-tabs-wrap">
+        <button class="filter-tab-btn active" data-filter="all">All Machines (8)</button>
+        <button class="filter-tab-btn" data-filter="naked">Naked Sports (Duke)</button>
+        <button class="filter-tab-btn" data-filter="supersport">Supersport (RC)</button>
+        <button class="filter-tab-btn" data-filter="adventure">Travel & Adventure</button>
+        <button class="filter-tab-btn" data-filter="flagship">The Beast 1390</button>
+      </div>
+
+      <!-- Dynamic Bikes Grid -->
+      <div class="bikes-grid" id="bikesGrid">
+        <!-- Rendered by js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. Web Audio KTM Engine Sound & Tachometer HUD
+       ========================================================================= -->
+  <section class="section-pad hud-section-bg" id="engine-hud-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pretitle">ACOUSTIC DYNO BENCH</span>
+        <h2 class="section-title">INTERACTIVE EXHAUST ROAR</h2>
+        <p class="section-subtitle">
+          Experience the authentic acoustic pulse of KTM single-cylinder thumpers and LC8 V-twins synthesized in real-time through the Web Audio API. Press and hold throttle to rev!
+        </p>
+      </div>
+
+      <div class="hud-container">
+        <div class="hud-top-bar">
+          <div class="hud-brand">
+            <div class="hud-status-led"></div>
+            <div class="hud-title">KTM TACHOMETER TELEMETRY</div>
+          </div>
+          <div class="hud-controls-select">
+            <label for="hudBikeSoundSelect">Select Engine:</label>
+            <select id="hudBikeSoundSelect" class="hud-select">
+              <!-- Populated by JS -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Active Sound Profile & Real Recording Player -->
+        <div class="hud-profile-card">
+          <div class="hud-profile-info">
+            <h4 id="hudCurrentSoundTitle">KTM 390 Duke (Gen-3) — 399cc Deep Thumper & Airbox Growl</h4>
+            <p id="hudCurrentSoundDesc">The Corner Rocket — Gen 3 Unleashed with distinct big-bore resonance</p>
+          </div>
+          <button id="btnPlayRealClip" class="btn-play-clip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Play Real Studio Recording
+          </button>
+        </div>
+
+        <!-- Live Acoustic Waveform Oscilloscope -->
+        <div class="hud-visualizer-box">
+          <div class="hud-visualizer-header">ACOUSTIC WAVEFORM SPECTRUM • LIVE FREQUENCY</div>
+          <canvas id="hudWaveformCanvas" width="850" height="60" class="hud-oscilloscope"></canvas>
+        </div>
+
+        <div class="hud-gauge-display">
+          <div class="hud-gauge-header">
+            <div class="hud-rpm-big">
+              <span class="rpm-number" id="revRpmCounter">1,600</span>
+              <span class="rpm-label">RPM</span>
+            </div>
+            <div class="shift-light" id="revShiftLight">
+              <span>SHIFT FLASH</span>
+            </div>
+          </div>
+
+          <div class="hud-rpm-bar-track">
+            <div class="hud-rpm-bar-fill" id="revRpmBar"></div>
+          </div>
+
+          <div class="hud-gauge-ticks">
+            <span>0</span>
+            <span>2K</span>
+            <span>4K</span>
+            <span>6K</span>
+            <span>8K</span>
+            <span>10K REDLINE</span>
+          </div>
+        </div>
+
+        <div class="hud-interactive-controls">
+          <button id="hudThrottleBtn" class="btn-throttle-pedal">
+            🔥 HOLD TO REV ENGINE
+          </button>
+          <button id="hudKillSwitch" class="btn-killswitch" title="Cut Engine Ignition">
+            KILL SWITCH
+          </button>
+        </div>
+
+        <p class="hud-hint-text">
+          💡 Tip: You can also hold the <strong>[Spacebar]</strong> on your keyboard to rev the engine!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. Head-to-Head Bike Comparator
+       ========================================================================= -->
+  <section class="section-pad" id="comparator-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pretitle">TECHNICAL MATCHUP</span>
+        <h2 class="section-title">HEAD-TO-HEAD BIKE COMPARATOR</h2>
+        <p class="section-subtitle">
+          Can't decide between Duke 250 vs Duke 390, or RC 390 vs Adventure 390? Compare technical specs, power curves, ergonomics, and Nepal pricing side-by-side.
+        </p>
+      </div>
+
+      <div class="comparator-selectors">
+        <div class="selector-box">
+          <label for="compareSelect1">Primary Bike</label>
+          <select id="compareSelect1">
+            <!-- Populated by comparator.js -->
+          </select>
+        </div>
+
+        <div class="compare-vs-badge">VS</div>
+
+        <div class="selector-box">
+          <label for="compareSelect2">Comparison Bike</label>
+          <select id="compareSelect2">
+            <!-- Populated by comparator.js -->
+          </select>
+        </div>
+      </div>
+
+      <div id="comparatorOutput">
+        <!-- Rendered by js/comparator.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. Nepal Bank Financing / EMI Calculator
+       ========================================================================= -->
+  <section class="section-pad" id="emi-calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pretitle">EASY OWNERSHIP</span>
+        <h2 class="section-title">NEPAL BANK EMI & FINANCE CALCULATOR</h2>
+        <p class="section-subtitle">
+          Calculate your monthly installment in Nepali Rupees (NPR) with our authorized banking partners in Butwal (Nabil, NIC Asia, Global IME, Himalayan Bank).
+        </p>
+      </div>
+
+      <div class="emi-box-grid">
+        <div class="emi-inputs-col">
+          <div class="emi-field-group">
+            <label for="emiBikeSelect">Choose KTM Model</label>
+            <select id="emiBikeSelect" class="emi-input-control">
+              <!-- Populated by emi-calculator.js -->
+            </select>
+          </div>
+
+          <div class="emi-field-group">
+            <label for="emiDownPaymentPercent">
+              Down Payment: <strong id="emiDownPaymentVal">40%</strong>
+            </label>
+            <input type="range" id="emiDownPaymentPercent" class="emi-slider" min="20" max="70" step="5" value="40">
+          </div>
+
+          <div class="emi-field-group">
+            <label for="emiTenureSelect">Loan Tenure</label>
+            <select id="emiTenureSelect" class="emi-input-control">
+              <option value="12">1 Year (12 Months)</option>
+              <option value="24">2 Years (24 Months)</option>
+              <option value="36" selected>3 Years (36 Months)</option>
+              <option value="48">4 Years (48 Months)</option>
+              <option value="60">5 Years (60 Months)</option>
+            </select>
+          </div>
+
+          <div class="emi-field-group">
+            <label for="emiInterestRate">
+              Annual Interest Rate: <strong id="emiInterestVal">10.5%</strong>
+            </label>
+            <input type="range" id="emiInterestRate" class="emi-slider" min="8" max="15" step="0.1" value="10.5">
+          </div>
+
+          <div class="emi-field-group">
+            <label>Partner Bank Presets in Butwal</label>
+            <div class="bank-presets-list" id="emiBankPresets">
+              <!-- Populated by emi-calculator.js -->
+            </div>
+          </div>
+        </div>
+
+        <div class="emi-results-col">
+          <div class="emi-hero-result">
+            <span class="emi-cap">ESTIMATED MONTHLY INSTALLMENT</span>
+            <div class="emi-big-amount" id="outMonthlyEmi">NPR 14,950</div>
+            <p style="font-size: 0.8rem; color: #777; margin-top: 0.5rem;">
+              *Subject to bank terms, credit score, and insurance in Rupandehi district.
+            </p>
+          </div>
+
+          <div class="emi-breakdown-list">
+            <div class="breakdown-row">
+              <span>Required Down Payment:</span>
+              <strong id="outDownPayment">NPR 3,99,960</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Loan Principal Financed:</span>
+              <strong id="outLoanAmount">NPR 5,99,940</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Total Interest Payable:</span>
+              <strong id="outTotalInterest">NPR 1,02,450</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Total Cost over Tenure:</span>
+              <strong id="outTotalPayable">NPR 11,02,350</strong>
+            </div>
+          </div>
+
+          <button class="btn-ktm-primary" style="width: 100%; justify-content: center;" onclick="openBookingModal(null, 'Finance Inquiry')">
+            Apply For Financing At Butwal Showroom
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. Butwal Ride Routes & Adventure Hub
+       ========================================================================= -->
+  <section class="section-pad" id="routes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pretitle">TERRAIN EXPLORATION</span>
+        <h2 class="section-title">BUTWAL HIGHLANDS & TRAILS GUIDE</h2>
+        <p class="section-subtitle">
+          Butwal is the starting grid for some of the greatest motorcycle roads in South Asia. Here are recommended ride routes tested by our local KTM community.
+        </p>
+      </div>
+
+      <div class="routes-grid" id="routesGrid">
+        <!-- Populated by js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. PowerWear & PowerParts Showcase
+       ========================================================================= -->
+  <section class="section-pad" id="powerparts">
+    <div class="container">
+      <div class="powerparts-banner">
+        <div class="powerparts-content">
+          <span class="section-pretitle">GENUINE ACCESSORIES</span>
+          <h3>KTM POWERPARTS & POWERWEAR BUTWAL</h3>
+          <p>
+            Equip yourself and your machine with genuine factory-tested equipment. Available right inside our Highway Autovilla Kalikanagar showroom.
+          </p>
+
+          <ul class="powerparts-list">
+            <li><span class="dot">»</span> Official KTM Racing Leather Jackets & Armor</li>
+            <li><span class="dot">»</span> Certified ECE 22.06 Full-Face Helmets & Gloves</li>
+            <li><span class="dot">»</span> Akrapovič Carbon & Titanium Slip-On Exhausts</li>
+            <li><span class="dot">»</span> Heavy-Duty Engine Guards & CNC Billet Aluminum Levers</li>
+            <li><span class="dot">»</span> WP Suspension Tuning Tools & Motorex Factory Lubricants</li>
+          </ul>
+
+          <button class="btn-ktm-primary" onclick="openBookingModal(null, 'PowerParts Inquiry')">
+            Inquire About Accessories
+          </button>
+        </div>
+
+        <div class="powerparts-media">
+          <img src="assets/images/powerparts.jpg" alt="KTM PowerParts Showroom Display" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. Authorized Dealership & Location Section
+       ========================================================================= -->
+  <section class="section-pad" id="showroom">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pretitle">OFFICIAL DEALERSHIP</span>
+        <h2 class="section-title">VISIT KTM SHOWROOM BUTWAL</h2>
+        <p class="section-subtitle">
+          Highway Autovilla Pvt. Ltd. — Authorized Sales, Service, Spare Parts & WP Suspension Center in Rupandehi.
+        </p>
+      </div>
+
+      <div class="dealer-info-grid">
+        <div class="dealer-main">
+          <h3>Highway Autovilla Pvt. Ltd.</h3>
+          <div class="dealer-distributor">
+            Official Authorized Distributor: Hansraj Hulaschand & Co. Pvt. Ltd.
+          </div>
+
+          <div class="dealer-contact-details">
+            <div class="contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <div>
+                <h5>Showroom Address</h5>
+                <p>Kalikanagar, Siddhartha Highway (Near Traffic Chowk), Butwal, Rupandehi, Nepal</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <div>
+                <h5>Telephone & Mobile</h5>
+                <p>
+                  <a href="tel:+9779802622282">+977 9802622282</a> / 
+                  <a href="tel:+9779802622263">+977 9802622263</a> / 
+                  <a href="tel:071540282">071-540282</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <div>
+                <h5>Official Email</h5>
+                <p><a href="mailto:ktmreadytoracebutwal1@gmail.com">ktmreadytoracebutwal1@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://maps.google.com/?q=KTM+Showroom+Butwal+Kalikanagar" target="_blank" rel="noopener" class="btn-ktm-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              View on Google Maps
+            </a>
+            <a href="https://wa.me/9779802622282?text=Hello%20KTM%20Butwal,%20I%20am%20interested%20in%20a%20motorcycle%20inquiry." target="_blank" rel="noopener" class="btn-ktm-whatsapp">
+              WhatsApp Sales Desk
+            </a>
+          </div>
+        </div>
+
+        <div class="dealer-hours-box">
+          <div>
+            <h4>Showroom & Service Hours</h4>
+            <div style="font-size: 0.95rem; color: #CCC; margin-bottom: 1rem; line-height: 1.7;">
+              <strong>Sunday – Friday:</strong> 9:30 AM – 6:30 PM<br>
+              <strong>Saturday:</strong> Closed / Available on Prior Appointment
+            </div>
+
+            <h4>Authorized Facility Services</h4>
+            <div class="services-tag-list">
+              <span class="service-tag">Official Sales & Booking</span>
+              <span class="service-tag">Test Ride Fleet</span>
+              <span class="service-tag">Genuine Spare Parts</span>
+              <span class="service-tag">WP Certified Service</span>
+              <span class="service-tag">Exchange Appraisal</span>
+              <span class="service-tag">Bank Loan Assistance</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; border-top: 1px solid #222; padding-top: 1rem;">
+            <button class="btn-ktm" style="width: 100%;" onclick="openBookingModal(null, 'Test Ride')">
+              Schedule Your Visit Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. Footer
+       ========================================================================= -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="ktm-logo-text">KTM<span class="ktm-slash">»</span></div>
+          <p>
+            Highway Autovilla Pvt. Ltd. is the authorized dealer for KTM Motorcycles in Butwal, Rupandehi, Nepal, under Hansraj Hulaschand & Co. Pvt. Ltd. Engineered in Mattighofen, Austria. Born to dominate every corner of the Himalayas.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>KTM Models</h4>
+          <ul class="footer-links">
+            <li><a href="#models" onclick="document.querySelector('[data-filter=naked]').click()">390 Duke Gen-3</a></li>
+            <li><a href="#models" onclick="document.querySelector('[data-filter=naked]').click()">250 Duke Gen-3</a></li>
+            <li><a href="#models" onclick="document.querySelector('[data-filter=naked]').click()">200 Duke</a></li>
+            <li><a href="#models" onclick="document.querySelector('[data-filter=supersport]').click()">RC 390 GP</a></li>
+            <li><a href="#models" onclick="document.querySelector('[data-filter=adventure]').click()">390 Adventure SW</a></li>
+            <li><a href="#models" onclick="document.querySelector('[data-filter=adventure]').click()">250 Adventure</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Tools</h4>
+          <ul class="footer-links">
+            <li><a href="#engine-hud-section">Exhaust Sound Simulator</a></li>
+            <li><a href="#comparator-section">Bike Comparator</a></li>
+            <li><a href="#emi-calculator">Nepal EMI Calculator</a></li>
+            <li><a href="#routes">Butwal Mountain Routes</a></li>
+            <li><a href="#powerparts">PowerWear Riding Gear</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Dealership</h4>
+          <div class="footer-contact-item">
+            <strong>Highway Autovilla Pvt. Ltd.</strong>
+            Kalikanagar, Siddhartha Highway, Butwal, Nepal
+          </div>
+          <div class="footer-contact-item">
+            <strong>Hotline & WhatsApp:</strong>
+            +977 9802622282 / 9802622263
+          </div>
+          <div class="footer-contact-item">
+            <strong>Email:</strong>
+            ktmreadytoracebutwal1@gmail.com
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 KTM Butwal — Highway Autovilla Pvt. Ltd. All rights reserved. Official dealer under Hansraj Hulaschand & Co. Pvt. Ltd.
+        </div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="#hero" style="color: var(--ktm-orange);">Back To Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       11. Modals: Test Ride Booking & Full Spec Sheet
+       ========================================================================= -->
+  <!-- Booking & Quotation Modal -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Close modal">&times;</button>
+      <div id="modalFormContainer">
+        <div class="modal-header">
+          <h3 id="modalTitle">BOOK A TEST RIDE — BUTWAL</h3>
+          <p>Experience KTM adrenaline at Highway Autovilla, Kalikanagar. Enter your details to confirm your slot.</p>
+        </div>
+
+        <form class="modal-form" onsubmit="handleBookingSubmit(event)">
+          <input type="hidden" id="modalServiceType" value="Test Ride">
+          
+          <div class="form-group">
+            <label for="modalName">Full Name *</label>
+            <input type="text" id="modalName" class="form-input" placeholder="e.g. Sambhav Sharma" required>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="modalPhone">Nepal Phone Number *</label>
+              <input type="tel" id="modalPhone" class="form-input" placeholder="98XXXXXXXX" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+              <label for="modalDate">Preferred Date</label>
+              <input type="date" id="modalDate" class="form-input">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="modalBikeSelect">Selected Motorcycle *</label>
+            <select id="modalBikeSelect" class="form-input" required>
+              <!-- Populated by JS -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="modalLocation">Showroom Location</label>
+            <input type="text" id="modalLocation" class="form-input" value="Highway Autovilla — Kalikanagar, Butwal" readonly>
+          </div>
+
+          <div class="form-group">
+            <label for="modalNotes">Remarks or Financing Questions (Optional)</label>
+            <textarea id="modalNotes" class="form-input" rows="2" placeholder="e.g. Interested in 50% down payment exchange"></textarea>
+          </div>
+
+          <button type="submit" class="btn-ktm-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+            Submit Request & Open WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detailed Technical Specs Modal -->
+  <div class="modal-overlay" id="bikeSpecsModal">
+    <div class="modal-card large">
+      <button class="modal-close-btn" id="closeSpecModalBtn" aria-label="Close modal">&times;</button>
+      <div id="specModalBody">
+        <!-- Populated dynamically by openSpecModal() in app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/bikes-data.js"></script>
+  <script src="js/audio-rev.js"></script>
+  <script src="js/comparator.js"></script>
+  <script src="js/emi-calculator.js"></script>
+  <script src="js/booking-modal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
